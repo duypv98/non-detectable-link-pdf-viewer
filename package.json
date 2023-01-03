@@ -1,0 +1,37 @@
+{
+  "name": "pdf-viewer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack serve --env development --mode development",
+    "build": "webpack --env production --mode production"
+  },
+  "dependencies": {
+    "devtools-detect": "^4.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-pdf": "^6.2.1",
+    "react-select": "^5.7.0",
+    "react-sizeme": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.17.9",
+    "@babel/plugin-transform-runtime": "7.17.0",
+    "@babel/preset-env": "7.16.11",
+    "@babel/preset-flow": "7.16.7",
+    "@babel/preset-react": "7.16.7",
+    "@babel/runtime": "7.17.9",
+    "babel-loader": "8.2.4",
+    "clean-webpack-plugin": "4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "6.5.1",
+    "html-webpack-plugin": "5.5.0",
+    "mini-css-extract-plugin": "2.4.5",
+    "node-sass": "npm:sass",
+    "sass-loader": "12.4.0",
+    "webpack": "5.65.0",
+    "webpack-cli": "4.10.0",
+    "webpack-dev-server": "4.7.1"
+  }
+}

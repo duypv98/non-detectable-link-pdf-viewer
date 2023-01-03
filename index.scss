@@ -1,0 +1,38 @@
+.pdf-viewer-container {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  user-select: none;
+  * {
+    font-family: inherit;
+  }
+  .pdf-viewer-pagination-wrap {
+    position: absolute;
+  }
+  .pdf-viewer-pagination-main {
+    position: fixed;
+    z-index: 1;
+    background-color: #fff !important;
+    width: 100%;
+    top: 0;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    justify-content: center;
+    .pdf-viewer-pagination-item {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      .pdf-viewer-pagination-nav {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &.disabled {
+          cursor: default;
+        }
+      }
+    }
+  }
+}
