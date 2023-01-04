@@ -1938,6 +1938,11 @@ commondir@^1.0.1:
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
   integrity sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==
 
+compare-versions@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/compare-versions/-/compare-versions-3.6.0.tgz#1a5689913685e5a87637b8d3ffca75514ec41d62"
+  integrity sha512-W6Af2Iw1z4CB7q4uU4hv646dW9GQuBM+YpC0UvUCWSD8w90SJjp+ujJuXaEMtAXBtSqGfMPuFOVn4/+FlaqfBA==
+
 compressible@~2.0.16:
   version "2.0.18"
   resolved "https://registry.yarnpkg.com/compressible/-/compressible-2.0.18.tgz#af53cca6b070d4c3c0750fbd77286a6d7cc46fba"
@@ -2188,10 +2193,12 @@ detect-node@^2.0.4:
   resolved "https://registry.yarnpkg.com/detect-node/-/detect-node-2.1.0.tgz#c9c70775a49c3d03bc2c06d9a73be550f978f8b1"
   integrity sha512-T0NIuQpnTvFDATNuHN5roPwSBG83rFsuO+MXXH9/3N1eFbn4wcPjttvjMLEPWJ0RGUYgQE7cGgS3tNxbqCGM7g==
 
-devtools-detect@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/devtools-detect/-/devtools-detect-4.0.1.tgz#2f3795b9339d25a5413107eb1b606ea9933e1b0a"
-  integrity sha512-Bfd5XzZhZ/oDqrLMD4F6fAE0QFUsoBbgEEhUjY6pYJ63xmzhg5NCzhxBz8hsx7ge8Nh0bxhtdU/naYeARUZyWg==
+devtools-detector@^2.0.14:
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/devtools-detector/-/devtools-detector-2.0.14.tgz#4e481cfa4768dab014fc3aca1bcbc9056bb2997d"
+  integrity sha512-lI7zNCDL+a6jusFIYG5zztJSGt6gNV+rtoDAm9Z00MhHKMHQxh58oLYLz0xlv0tFwbzl1S0Qq6P87iznwwEcGw==
+  dependencies:
+    compare-versions "^3.6.0"
 
 dir-glob@^3.0.1:
   version "3.0.1"

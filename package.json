@@ -8,7 +8,7 @@
     "build": "webpack --env production --mode production"
   },
   "dependencies": {
-    "devtools-detect": "^4.0.1",
+    "devtools-detector": "^2.0.14",
     "react": "17.0.2",
     "react-doc-viewer": "^0.1.5",
     "react-dom": "17.0.2",

@@ -49,6 +49,6 @@ export const init = (args) => {
 
 // init({
 //   url: "https://storage.googleapis.com/kslearning/00-Introduction.pdf",
-//   url: "https://storage.googleapis.com/kslearning/document/112393309-1565707194688-de19.docx",
+//   // url: "https://storage.googleapis.com/kslearning/document/112393309-1565707194688-de19.docx",
 //   pagination: true
 // });

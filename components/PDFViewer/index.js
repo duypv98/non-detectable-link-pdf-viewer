@@ -1,4 +1,3 @@
-import devTools from "devtools-detect";
 import { Fragment, useMemo, useState } from "react";
 import {
   Document as PDFDocument,
@@ -9,6 +8,7 @@ import Select from "react-select";
 import { SizeMe } from "react-sizeme";
 import ChevronLeftIcon from "../../icons/ChevronLeftIcon";
 import ChevronRightIcon from "../../icons/ChevronRightIcon";
+import useDevToolsDetector from "../../useDevToolsDetector";
 import "./pdfviewer.scss";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
@@ -30,6 +30,8 @@ const PDFViewer = (props) => {
   const [totalPage, setTotalPage] = useState(0);
   const [page, setPage] = useState(0);
   const [showPages, setShowPages] = useState(10);
+
+  const { detectedDevTools } = useDevToolsDetector();
 
   const arrPages = useMemo(() => {
     return pagination ? new Array(showPages).fill(null) : new Array(totalPage).fill(null)
@@ -80,7 +82,7 @@ const PDFViewer = (props) => {
           </div>
         </div>
       </div>}
-      {!devTools.isOpen && <PDFDocument
+      {!detectedDevTools && <PDFDocument
         className="pdf-document"
         file={uri}
         loading={<>Loading...</>}

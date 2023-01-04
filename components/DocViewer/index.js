@@ -1,7 +1,7 @@
-import devTools from "devtools-detect";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback } from "react";
 import ReactDocViewer, { DocViewerRenderers, MSDocRenderer } from "react-doc-viewer";
 import { SizeMe } from "react-sizeme";
+import useDevToolsDetector from "../../useDevToolsDetector";
 import "./docviewer.scss";
 
 /**
@@ -14,21 +14,7 @@ import "./docviewer.scss";
  */
 const DocViewer = (props) => {
   const { url, maxHeight } = props;
-  const [detectedDevTools, setDetectedDevTools] = useState(devTools.isOpen);
-
-  useEffect(() => {
-    /**
-     * 
-     * @param {DevToolsEvent} evt 
-     */
-    const checkDevTools = (evt) => {
-      setDetectedDevTools(evt.detail.isOpen);
-    }
-    window.addEventListener("devtoolschange", checkDevTools);
-    return () => {
-      window.removeEventListener("devtoolschange", checkDevTools);
-    }
-  }, []);
+  const { detectedDevTools } = useDevToolsDetector();
 
   const getMimeType = useCallback(() => {
     const fileExtension = url.slice(url.lastIndexOf(".") + 1);
