@@ -10,8 +10,9 @@
   "dependencies": {
     "devtools-detect": "^4.0.1",
     "react": "17.0.2",
+    "react-doc-viewer": "^0.1.5",
     "react-dom": "17.0.2",
-    "react-pdf": "^6.2.1",
+    "react-pdf": "5.0.0",
     "react-select": "^5.7.0",
     "react-sizeme": "^3.0.2"
   },
